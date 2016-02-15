@@ -15,7 +15,9 @@ public class TimeCalc {
 		 * */
 		
 		int min = second / 60;
+		// sec %= 60;
 		int hour = min / 60;
+		// min %= 60;
 		int rsec = second % 60;
 		int rmin = min % 60;
 		
@@ -23,6 +25,7 @@ public class TimeCalc {
 			System.out.println("입력한 초는 " + second + "초입니다.");
 		} else {
 			System.out.println("입력한 " + second + "초는 " + hour + "시간 " + rmin + "분 " + rsec + "초입니다.");
+			// System.out.println("입력한 " + second + "초는 " + hour + "시간 " + min + "분 " + sec + "초입니다.");
 		}
 
 	}
