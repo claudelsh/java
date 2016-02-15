@@ -20,6 +20,7 @@ public class InputSum {
 		for (int i = min; i <= max; i++) {
 			result += i;
 		}
+		
 		System.out.println(min + "부터 " + max + "까지의 합은 " + result + "입니다.");
 	}
 }

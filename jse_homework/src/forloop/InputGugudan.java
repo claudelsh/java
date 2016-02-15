@@ -13,7 +13,7 @@ public class InputGugudan {
 			System.out.println("잘못된 입력입니다.");
 		} else {
 			for (int i = 1; i <= 9; i++) {
-				System.out.println(num + " * " + i + " = " );
+				System.out.println(num + " * " + i + " = " + num * i);
 			}
 		}
 	}
