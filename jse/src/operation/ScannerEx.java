@@ -13,6 +13,6 @@ public class ScannerEx {
 		System.out.println("나이는?");
 		int age = scanner.nextInt();
 		System.out.println(age + "입니다");
-		System.out.println("이름은" + name + ", 나이는" + age + "입니다.");
+		System.out.println("이름은 " + name + ", 나이는 " + age + "입니다.");
 	}
 }

@@ -24,12 +24,15 @@ public class ReportCard {
 		int total = korean + english + math + science;
 		double average = total / 4;
 		
-		if (average >= 60.0) {
-			System.out.println("이름 : "
-		+ name + " / 총점 : " + total + " / 평균 : " + average + "점으로 합격입니다.");
+		String result = "이름 : "
+				+ name + " / 총점 : " + total + " / 평균 : " + average + "점으로 ";
+		
+		if (average >= 90.0) {
+			System.out.println(result + "장학생입니다.");
+		} else if (average >= 60.0) {
+			System.out.println(result + "합격입니다.");
 		} else {
-			System.out.println("이름 : "
-					+ name + " / 총점 : " + total + " / 평균 : " + average + "점으로 불합격입니다.");
+			System.out.println(result + "불합격입니다.");
 		}
 	}
 }
