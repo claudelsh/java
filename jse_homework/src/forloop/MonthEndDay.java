@@ -11,8 +11,8 @@ public class MonthEndDay {
 		 * */
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("월을 입력하세요 : ");
-		int month = scanner.nextInt();
+		System.out.println("년, 월을 입력하세요 : ");
+		int year = scanner.nextInt(), month = scanner.nextInt();
 		int result = 0;
 		
 		switch (month) {
@@ -20,8 +20,11 @@ public class MonthEndDay {
 			result = 31;
 			break;
 		case 2:
-			result = 29;
-			break;
+	         result = 28;
+	         if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400) == 0)) {
+				result = 29;
+			}
+	         break;
 		case 4:case 6:case 9:case 11:
 			result = 30;
 			break;
