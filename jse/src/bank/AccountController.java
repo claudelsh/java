@@ -15,9 +15,17 @@ public class AccountController {
 				System.out.println("이름 / 비밀번호");
 				System.out.println(account.open(scanner.next(), scanner.nextInt()));
 				break;
-			case 2:break;
-			case 3:break;
-			case 4:break;
+			case 2:
+				System.out.println("입금 금액 입력 : ");
+				System.out.println("금액 : " + account.deposit(scanner.nextInt()));
+				break;
+			case 3:
+				System.out.println("출금 금액 입력 : ");
+				System.out.println("금액 : " + account.withdraw(scanner.nextInt()));
+				break;
+			case 4:
+				System.out.println("\n잔액 : " + account.search());
+				break;
 			case 5:System.out.println("종료합니다.");return;
 			default:
 				System.out.println("1~5번 사이에서 선택 가능합니다.");
