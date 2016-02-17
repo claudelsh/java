@@ -23,6 +23,11 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public String withdraw(int money) {
 		// 3. 출금
+		// alt + shift + m : 메소드로 추출하는 단축키
+		return saveMoney(money);
+	}
+
+	private String saveMoney(int money) {
 		int total = account.getMoney();
 		if ((total - money) < 0) {
 			System.out.println("잔액이 부족합니다. 잔액 : " + total + ", 출금액 : " + money);
@@ -35,7 +40,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public String search() {
 		// 4. 잔액조회
-		return account.toString();
+		return "잔액 : " + account.getMoney();
 	}
 
 }
